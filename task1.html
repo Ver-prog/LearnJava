@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Основи програмування: змінні</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Навчальний Сайт з програмування на мові Java для початківців</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про сайт</a></li>
+                <li><a href="lectures.html">Лекції</a></li>
+                <li><a href="tutorials.html">Відеоуроки</a></li>
+                <li><a href="exercises.html" class="active">Тести</a></li>
+                <li><a href="reg.html">Реєстрація</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="quiz-content">
+        <h2>Тест: Основи програмування: змінні</h2>
+        <p class="intro-text">Перевірте свої знання з основ програмування, зокрема змінних.</p>
+        <form id="quizForm">
+            <fieldset>
+                <legend>1. Що таке змінні в програмуванні?</legend>
+                <label>
+                    <input type="radio" name="question1" value="b"> Іменовані області пам'яті, в яких зберігаються дані
+                </label><br>
+                <label>
+                    <input type="radio" name="question1" value="a"> Області пам'яті, в яких зберігаються змінні
+                </label><br>
+                <label>
+                    <input type="radio" name="question1" value="c"> Об'єкти, що виконують операції
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Який тип даних використовують для зберігання цілих чисел?</legend>
+                <label>
+                    <input type="radio" name="question2" value="b"> Int
+                </label><br>
+                <label>
+                    <input type="radio" name="question2" value="a"> String
+                </label><br>
+                <label>
+                    <input type="radio" name="question2" value="c"> Float
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Що є правильним синтаксисом для оголошення змінної?</legend>
+                <label>
+                    <input type="radio" name="question3" value="c"> age = 25
+                </label><br>
+                <label>
+                    <input type="radio" name="question3" value="a"> int age = 25
+                </label><br>
+                <label>
+                    <input type="radio" name="question3" value="b"> var age = 25
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>4. Як оголосити булеву змінну в JavaScript?</legend>
+                <label>
+                    <input type="radio" name="question4" value="c"> let is_programmer = true
+                </label><br>
+                <label>
+                    <input type="radio" name="question4" value="a"> var is_programmer = True
+                </label><br>
+                <label>
+                    <input type="radio" name="question4" value="b"> let is_programmer = "True"
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>5. Який тип змінних використовується для зберігання тексту?</legend>
+                <label>
+                    <input type="radio" name="question5" value="c"> String
+                </label><br>
+                <label>
+                    <input type="radio" name="question5" value="a"> Integer
+                </label><br>
+                <label>
+                    <input type="radio" name="question5" value="b"> Boolean
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>6. Що таке змінна в програмуванні?</legend>
+                <label>
+                    <input type="radio" name="question6" value="b"> Це іменована область пам'яті, яка зберігає змінювані дані
+                </label><br>
+                <label>
+                    <input type="radio" name="question6" value="a"> Це константа, значення якої не змінюється
+                </label><br>
+                <label>
+                    <input type="radio" name="question6" value="c"> Це тип даних, що зберігає тільки числа
+                </label><br>
+                <label>
+                    <input type="radio" name="question6" value="d"> Це спеціальна функція, яка визначає тип даних
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>7. Які типи змінних існують у програмуванні?</legend>
+                <label>
+                    <input type="radio" name="question7" value="b"> Числові, текстові, логічні та складені типи
+                </label><br>
+                <label>
+                    <input type="radio" name="question7" value="a"> Тільки числові типи
+                </label><br>
+                <label>
+                    <input type="radio" name="question7" value="c"> Тільки текстові типи
+                </label><br>
+                <label>
+                    <input type="radio" name="question7" value="d"> Логічні та текстові типи
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>8. Яким чином в Python оголошується змінна?</legend>
+                <label>
+                    <input type="radio" name="question8" value="b"> age = 25
+                </label><br>
+                <label>
+                    <input type="radio" name="question8" value="a"> int age = 25
+                </label><br>
+                <label>
+                    <input type="radio" name="question8" value="c"> var age = 25
+                </label><br>
+                <label>
+                    <input type="radio" name="question8" value="d"> integer age = 25
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>9. Що є правильним правилом для іменування змінних?</legend>
+                <label>
+                    <input type="radio" name="question9" value="b"> Ім’я змінної не може містити пробілів
+                </label><br>
+                <label>
+                    <input type="radio" name="question9" value="a"> Ім’я змінної може починатися з цифри
+                </label><br>
+                <label>
+                    <input type="radio" name="question9" value="c"> Ім’я змінної може містити пробіли, якщо між ними використати підкреслення
+                </label><br>
+                <label>
+                    <input type="radio" name="question9" value="d"> Ім’я змінної має бути дуже коротким, щоб зекономити місце
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>10. Який з варіантів є правильним для оголошення змінної в C++?</legend>
+                <label>
+                    <input type="radio" name="question10" value="b"> int age = 25;
+                </label><br>
+                <label>
+                    <input type="radio" name="question10" value="a"> int age = "Олена"
+                </label><br>
+                <label>
+                    <input type="radio" name="question10" value="c"> age = 25;
+                </label><br>
+                <label>
+                    <input type="radio" name="question10" value="d"> String age = 25;
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>11. Що таке “магічне число” в програмуванні?</legend>
+                <label>
+                    <input type="radio" name="question11" value="b"> Число, яке використовують без пояснення або опису в коді
+                </label><br>
+                <label>
+                    <input type="radio" name="question11" value="a"> Число, яке використовується для генерації випадкових значень
+                </label><br>
+                <label>
+                    <input type="radio" name="question11" value="c"> Число, яке виводиться на екран в результаті програми
+                </label><br>
+                <label>
+                    <input type="radio" name="question11" value="d"> Число, яке не має значення в програмі
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>12. Що означає тип змінної "bool"?</legend>
+                <label>
+                    <input type="radio" name="question12" value="c"> Змінна може бути лише True або False
+                </label><br>
+                <label>
+                    <input type="radio" name="question12" value="a"> Змінна може зберігати текст
+                </label><br>
+                <label>
+                    <input type="radio" name="question12" value="b"> Змінна може зберігати числа
+                </label><br>
+                <label>
+                    <input type="radio" name="question12" value="d"> Змінна може зберігати дату та час
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>13. Як правильно присвоїти значення змінній у JavaScript?</legend>
+                <label>
+                    <input type="radio" name="question13" value="b"> let age = 25;
+                </label><br>
+                <label>
+                    <input type="radio" name="question13" value="a"> var age := 25;
+                </label><br>
+                <label>
+                    <input type="radio" name="question13" value="c"> age = 25;
+                </label><br>
+                <label>
+                    <input type="radio" name="question13" value="d"> age == 25;
+                </label><br>
+            </fieldset>
+
+            <button type="button" onclick="checkAnswers()">Перевірити</button>
+        </form>
+
+        <div id="result"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Навчальний Сайт з Інформатики</p>
+        <p>Контакти: info@informatika-site.ua</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let totalQuestions = 13;
+            let resultText = "";
+            
+            // Питання 1
+            let answer1 = document.querySelector('input[name="question1"]:checked');
+            if (answer1 && answer1.value === "b") {
+                score++;
+                resultText += "<p class='correct'>1. Правильно! Змінні — це іменовані області пам'яті, в яких зберігаються дані.</p>";
+            } else {
+                resultText += "<p class='incorrect'>1. Неправильно! Правильний варіант: Іменовані області пам'яті, в яких зберігаються дані.</p>";
+            }
+
+            // Питання 2
+            let answer2 = document.querySelector('input[name="question2"]:checked');
+            if (answer2 && answer2.value === "b") {
+                score++;
+                resultText += "<p class='correct'>2. Правильно! Тип для цілих чисел — int.</p>";
+            } else {
+                resultText += "<p class='incorrect'>2. Неправильно! Правильний варіант: Тип для цілих чисел — int.</p>";
+            }
+
+            // Питання 3
+            let answer3 = document.querySelector('input[name="question3"]:checked');
+            if (answer3 && answer3.value === "c") {
+                score++;
+                resultText += "<p class='correct'>3. Правильно! Синтаксис для оголошення змінної: age = 25.</p>";
+            } else {
+                resultText += "<p class='incorrect'>3. Неправильно! Правильний варіант:синтаксис для оголошення змінної: age = 25.</p>";
+            }
+
+            // Питання 4
+            let answer4 = document.querySelector('input[name="question4"]:checked');
+            if (answer4 && answer4.value === "c") {
+                score++;
+                resultText += "<p class='correct'>4. Правильно! Булева змінна в JavaScript: let is_programmer = true.</p>";
+            } else {
+                resultText += "<p class='incorrect'>4. Неправильно! Правильний варіант: Булева змінна в JavaScript: let is_programmer = true.</p>";
+            }
+
+            // Питання 5
+            let answer5 = document.querySelector('input[name="question5"]:checked');
+            if (answer5 && answer5.value === "c") {
+                score++;
+                resultText += "<p class='correct'>5. Правильно! Тип для зберігання тексту — String.</p>";
+            } else {
+                resultText += "<p class='incorrect'>5. Неправильно! Правильний варіант: Тип для зберігання тексту — String.</p>";
+            }
+            
+            // Питання 6
+            let answer6 = document.querySelector('input[name="question6"]:checked');
+            if (answer6 && answer6.value === "b") {
+                score++;
+                resultText += "<p class='correct'>6. Правильно! Змінна — це іменована область пам'яті, яка зберігає змінювані дані.</p>";
+            } else {
+                resultText += "<p class='incorrect'>6. Неправильно! Правильний варіант: Змінна — це іменована область пам'яті, яка зберігає змінювані дані.</p>";
+            }
+
+            // Питання 7
+            let answer7 = document.querySelector('input[name="question7"]:checked');
+            if (answer7 && answer7.value === "b") {
+                score++;
+                resultText += "<p class='correct'>7. Правильно! Існують числові, текстові, логічні та складені типи змінних.</p>";
+            } else {
+                resultText += "<p class='incorrect'>7. Неправильно! Правильний варіант: Існують числові, текстові, логічні та складені типи змінних.</p>";
+            }
+
+            // Питання 8
+            let answer8 = document.querySelector('input[name="question8"]:checked');
+            if (answer8 && answer8.value === "b") {
+                score++;
+                resultText += "<p class='correct'>8. Правильно! В Python оголошення змінної: age = 25.</p>";
+            } else {
+                resultText += "<p class='incorrect'>8. Неправильно! Правильний варіант: В Python оголошення змінної: age = 25.</p>";
+            }
+
+            // Питання 9
+            let answer9 = document.querySelector('input[name="question9"]:checked');
+            if (answer9 && answer9.value === "b") {
+                score++;
+                resultText += "<p class='correct'>9. Правильно! Ім'я змінної не може містити пробілів.</p>";
+            } else {
+                resultText += "<p class='incorrect'>9. Неправильно! Правильний варіант: Ім'я змінної не може містити пробілів.</p>";
+            }
+
+            // Питання 10
+            let answer10 = document.querySelector('input[name="question10"]:checked');
+            if (answer10 && answer10.value === "b") {
+                score++;
+                resultText += "<p class='correct'>10. Правильно! Оголошення змінної в C++: int age = 25;</p>";
+            } else {
+                resultText += "<p class='incorrect'>10. Неправильно! Правильний варіант: Оголошення змінної в C++: int age = 25;</p>";
+            }
+
+            // Питання 11
+            let answer11 = document.querySelector('input[name="question11"]:checked');
+            if (answer11 && answer11.value === "b") {
+                score++;
+                resultText += "<p class='correct'>11. Правильно! Магічне число — це число, яке використовують без пояснення в коді.</p>";
+            } else {
+                resultText += "<p class='incorrect'>11. Неправильно! Правильний варіант: Магічне число — це число, яке використовують без пояснення в коді.</p>";
+            }
+
+            // Питання 12
+            let answer12 = document.querySelector('input[name="question12"]:checked');
+            if (answer12 && answer12.value === "c") {
+                score++;
+                resultText += "<p class='correct'>12. Правильно! Тип bool означає змінну, яка може бути лише True або False.</p>";
+            } else {
+                resultText += "<p class='incorrect'>12. Неправильно! Правильний варіант: Тип bool означає змінну, яка може бути лише True або False.</p>";
+            }
+
+            // Питання 13
+            let answer13 = document.querySelector('input[name="question13"]:checked');
+            if (answer13 && answer13.value === "b") {
+                score++;
+                resultText += "<p class='correct'>13. Правильно! Присвоєння значення змінній у JavaScript: let age = 25;</p>";
+            } else {
+                resultText += "<p class='incorrect'>13. Неправильно! Правильний варіант: Присвоєння значення змінній у JavaScript: let age = 25;</p>";
+            }
+
+            resultText += "<p><strong>Ваш результат: " + score + " з " + totalQuestions + " правильних відповідей.</strong></p>";
+            document.getElementById('result').innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
+
+

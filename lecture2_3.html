@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лекція 2.3: Алгоритми і структури даних: сортування</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Навчальний Сайт з програмування на мові Java для початківців</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про сайт</a></li>
+                <li><a href="lectures.html"class="active">Лекції</a></li>
+                <li><a href="tutorials.html" >Відеоуроки</a></li>
+                <li><a href="exercises.html">Тести</a></li>
+                <li><a href="reg.html">Реєстрація</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="lecture-content">
+        <article>
+            <h2>Лекція 2.3: Алгоритми і структури даних: сортування</h2>
+            <p>Сортування є однією з основних операцій в обробці даних. Воно полягає в упорядкуванні елементів колекції (масиву, списку, тощо) за певним критерієм, наприклад, за зростанням або спаданням. Алгоритми сортування є важливим інструментом для оптимізації інших алгоритмів, таких як пошук, пошук найближчих сусідів, та інші.</p>
+            <p>Існує багато алгоритмів сортування, кожен з яких має свої переваги та недоліки, залежно від вимог до часу виконання та простору пам'яті.</p>
+
+            <h3>Типи алгоритмів сортування</h3>
+            <h4>Алгоритм бульбашкового сортування (Bubble Sort)</h4>
+            <p>Це один з найпростіших і найповільніших алгоритмів сортування. У цьому алгоритмі ми порівнюємо кожен елемент з наступним і, якщо елемент більший, міняємо їх місцями. Алгоритм має складність O(n²), де n — кількість елементів в масиві.</p>
+
+            <h4>Алгоритм швидкого сортування (Quick Sort)</h4>
+            <p>Це роздільно-завоювальний алгоритм, який використовує розбиття масиву на підмасиви, де кожен підмасив відсортований. Має середню складність O(n log n), але у найгіршому випадку може мати складність O(n²).</p>
+
+            <h4>Алгоритм сортування злиттям (Merge Sort)</h4>
+            <p>Ще один роздільно-завоювальний алгоритм, який працює шляхом розбиття масиву на дві частини, сортування кожної частини та їх злиття. Має складність O(n log n), навіть у найгіршому випадку.</p>
+
+            <h4>Алгоритм сортування вибором (Selection Sort)</h4>
+            <p>Вибір найменшого елемента з незасортованої частини масиву і його обмін з першим елементом. Складність O(n²).</p>
+
+            <h4>Алгоритм сортування вставками (Insertion Sort)</h4>
+            <p>Ідея полягає в тому, щоб вставляти кожен новий елемент на правильне місце в вже відсортованій частині масиву. Складність O(n²) в найгіршому випадку.</p>
+
+            <h3>1. Алгоритм сортування бульбашкою (Bubble Sort)</h3>
+            <p>Опис: Алгоритм бульбашкового сортування порівнює пари сусідніх елементів і міняє їх місцями, якщо вони знаходяться в неправильному порядку. Повторюється це до тих пір, поки весь масив не стане відсортованим.</p>
+
+            <pre><code>public class BubbleSort {
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i &lt; n - 1; i++) {
+            for (int j = 0; j &lt; n - i - 1; j++) {
+                if (arr[j] &gt; arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void printArray(int[] arr) {
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        System.out.println("Невідсортований масив:");
+        printArray(arr);
+
+        bubbleSort(arr);
+
+        System.out.println("Відсортований масив:");
+        printArray(arr);
+    }
+}
+</code></pre>
+
+            <h3>2. Алгоритм швидкого сортування (Quick Sort)</h3>
+            <p>Опис: Швидке сортування базується на ідеї вибору опорного елемента і поділу масиву на два підмасиви: менші за опорний та більші за опорний. Після цього рекурсивно сортуються підмасиви.</p>
+
+            <pre><code>public class QuickSort {
+    public static void quickSort(int[] arr, int low, int high) {
+        if (low &lt; high) {
+            int pi = partition(arr, low, high);  // Отримуємо індекс опорного елемента
+
+            quickSort(arr, low, pi - 1);
+            quickSort(arr, pi + 1, high);
+        }
+    }
+
+    private static int partition(int[] arr, int low, int high) {
+        int pivot = arr[high];  // Вибір останнього елемента як опорного
+        int i = (low - 1);
+
+        for (int j = low; j &lt; high; j++) {
+            if (arr[j] &lt;= pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+
+        return i + 1;
+    }
+
+    public static void printArray(int[] arr) {
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {10, 7, 8, 9, 1, 5};
+        System.out.println("Невідсортований масив:");
+        printArray(arr);
+
+        quickSort(arr, 0, arr.length - 1);
+
+        System.out.println("Відсортований масив:");
+        printArray(arr);
+    }
+}
+</code></pre>
+
+            <h3>3. Алгоритм сортування злиттям (Merge Sort)</h3>
+            <p>Опис: Алгоритм сортування злиттям розбиває масив на дві половини, сортує кожну з них, а потім зливає дві відсортовані частини в один відсортований масив.</p>
+
+            <pre><code>public class MergeSort {
+    public static void mergeSort(int[] arr, int left, int right) {
+        if (left &lt; right) {
+            int mid = (left + right) / 2;
+
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+
+            merge(arr, left, mid, right);
+        }
+    }
+
+    private static void merge(int[] arr, int left, int mid, int right) {
+        int n1 = mid - left + 1;
+        int n2 = right - mid;
+
+        int[] L = new int[n1];
+        int[] R = new int[n2];
+
+        for (int i = 0; i &lt; n1; ++i)
+            L[i] = arr[left + i];
+        for (int j = 0; j &lt; n2; ++j)
+            R[j] = arr[mid + 1 + j];
+
+        int i = 0, j = 0;
+        int k = left;
+        while (i &lt; n1 &amp;&amp; j &lt; n2) {
+            if (L[i] &lt;= R[j]) {
+                arr[k] = L[i];
+                i++;
+            } else {
+                arr[k] = R[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i &lt; n1) {
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+
+        while (j &lt; n2) {
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
+    }
+
+    public static void printArray(int[] arr) {
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {12, 11, 13, 5, 6, 7};
+        System.out.println("Невідсортований масив:");
+        printArray(arr);
+
+        mergeSort(arr, 0, arr.length - 1);
+
+        System.out.println("Відсортований масив:");
+        printArray(arr);
+    }
+}
+</code></pre>
+
+            <h3>Підсумок</h3>
+            <p>Всі ці алгоритми мають різну складність і підходять для різних сценаріїв. Алгоритм бульбашкового сортування простий для розуміння, але дуже повільний на великих масивах, тому не підходить для реальних задач з великими даними. Алгоритми швидкого сортування та злиття є більш ефективними і підходять для більшості задач у реальному житті.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Навчальний Сайт з Інформатики</p>
+        <p>Контакти: info@informatika-site.ua</p>
+    </footer>
+</body>
+</html>
+
+
+

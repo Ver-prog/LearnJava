@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація - Навчальний Сайт з Інформатики</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Навчальний Сайт з програмування на мові Java для початківців</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про сайт</a></li>
+                <li><a href="lectures.html">Лекції</a></li>
+                <li><a href="tutorials.html">Відеоуроки</a></li>
+                <li><a href="exercises.html">Тести</a></li>
+                <li><a href="reg.html" class="active">Реєстрація</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="registration" class="section-content">
+            <div class="registration-page">
+                <div class="registration-container">
+                    <h2>Реєстрація</h2>
+                    <form id="registration-form">
+                        <div class="form-group">
+                            <label for="username">Ім'я користувача:</label>
+                            <input type="text" id="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" required>
+                            <button type="button" id="toggle-password" class="toggle-password">Показати</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Підтвердіть пароль:</label>
+                            <input type="password" id="confirm-password" required>
+                            <button type="button" id="toggle-confirm-password" class="toggle-password">Показати</button>
+                        </div>
+                        <button type="submit" class="button">Зареєструватися</button>
+                    </form>
+                    <p>Вже маєте акаунт? <a href="login.html">Увійдіть тут</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Навчальний сайт з Інформатики</p>
+        <p>Контакти: info@informatika-site.ua</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
